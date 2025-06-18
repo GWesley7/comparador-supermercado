@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center p-6">
+    <h1 class="text-3xl font-bold mb-6 text-center">Resultados de la comparación</h1>
+    <div class="bg-white shadow-md rounded p-6 w-full max-w-md">
+        <p class="mb-4">Productos: {{ ', '.join(produtos) }}</p>
+        <p class="mb-2">Total Coto: ${{ total_coto }}</p>
+        <p class="mb-2">Total Carrefour: ${{ total_carrefour }}</p>
+    </div>
+</body>
+</html>
