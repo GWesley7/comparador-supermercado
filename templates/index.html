@@ -7,15 +7,6 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<script>
-  const cocaCheckbox = document.querySelector('.toggle-coca');
-  const cocaOptions = document.querySelector('.coca-options');
-
-  cocaCheckbox.addEventListener('change', () => {
-    cocaOptions.classList.toggle('hidden', !cocaCheckbox.checked);
-  });
-</script>
-
 <body class="bg-gray-100 min-h-screen flex flex-col items-center p-6">
 
   <h1 class="text-3xl font-bold mb-6 text-center">🛒 Comparador de Supermercado</h1>
@@ -35,7 +26,7 @@
                 <div class="flex flex-col">
                     <label class="flex items-center">
                         <input type="checkbox" name="produtos" value="coca-cola" class="mr-2 toggle-coca">
-                        Gaseosa Coca-Cola Zero
+                        Coca-Cola
                     </label>
                         <div class="ml-6 mt-2 hidden coca-options">
                             <label class="flex items-center">
@@ -64,6 +55,19 @@
       Comparar Preços
     </button>
   </form>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const cocaCheckbox = document.querySelector('.toggle-coca');
+      const cocaOptions = document.querySelector('.coca-options');
+
+      if (cocaCheckbox && cocaOptions) {
+        cocaCheckbox.addEventListener('change', () => {
+          cocaOptions.classList.toggle('hidden', !cocaCheckbox.checked);
+        });
+      }
+    });
+  </script>
 
 </body>
 </html>
