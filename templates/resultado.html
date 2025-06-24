@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resultado da Comparação</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center p-6">
+  <h1 class="text-3xl font-bold mb-6 text-center">Resultado da Comparação</h1>
+  <table class="table-auto bg-white shadow-md rounded p-6">
+    <thead>
+      <tr>
+        <th class="px-4 py-2">Produto</th>
+        <th class="px-4 py-2">Loja Mais Barata</th>
+        <th class="px-4 py-2">Preço</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for produto, info in resultados.items() %}
+      <tr>
+        <td class="border px-4 py-2">{{ produto }}</td>
+        <td class="border px-4 py-2">{{ info.loja }}</td>
+        <td class="border px-4 py-2">{{ info.preco }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <a href="/" class="mt-6 text-blue-500 hover:underline">Voltar</a>
+</body>
+</html>
